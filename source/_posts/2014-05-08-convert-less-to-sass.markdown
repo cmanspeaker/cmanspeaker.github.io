@@ -15,18 +15,21 @@ Overall the syntax for Less and Sass are pretty similar in some aspects so as lo
 The obvious first step would be to rename your files with the .less file extension over to .scss or .sass. I personally use the .scss formatting on my Sass files so I've used that file extension.
 
 ###Imports
-Imports will remain the same with using the `@import` to import in your various source files.
+Imports will remain the same with using the `@import` syntax to pull in your various source files.
 
 ###Variables
 This will be the biggest area where you'll more than likely have the most revisions. Less prefixes variables with @ while Sass uses $
 
-``` [title]
-// LESS
-@variable1 : 12;
-@variable2: 30;
+``` sass Variables
 
-//SASS
-$variable1: 12;
-$variable2: 30;
+// LESS
+@var1: 12;
+@var2: 30;
+
+// SASS
+$var1: 12;
+$var2: 30;
 
 ```
+###Mixins
+This will be the biggest area where you'll more than likely have the most revisions. Less prefixes variables with @ while Sass uses $
