@@ -5,11 +5,12 @@
 //
 // *************************************
 
-.l-page {
-  //@include container(12 90%);
+.l-container {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 61.25em;
   @extend %l-space;
-  @extend %debug;
-  height: 1000px;
+  // @extend %debug;
 }
 
   // @include breakpoint(23em) {
