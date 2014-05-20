@@ -5,14 +5,18 @@
 //
 // *************************************
 
-.l-container {
+.l-container,
+%l-container {
   margin: 0 auto;
   width: 85%;
   max-width: 61.25em;
-  @extend %l-space;
+  //@extend %l-space;
   // @extend %debug;
 }
 
+hgroup {
+  @extend %l-container;
+}
   // @include breakpoint(23em) {
   //   width: 85%;
   // }

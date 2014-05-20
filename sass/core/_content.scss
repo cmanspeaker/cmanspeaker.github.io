@@ -12,7 +12,9 @@
 h1, h2, h3,
 h4, h5, h6 {
   font-family: $c-header-fontFamily;
-  font-weight: bold;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
 }
 
 h1, .c-h1, %c-h1 {
