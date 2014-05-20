@@ -22,3 +22,10 @@
 .meta {
   font-family: $c-header-fontFamily;
 }
+
+.main-navigation {
+  list-style: none;
+  li {
+    display: inline-block;
+  }
+}
