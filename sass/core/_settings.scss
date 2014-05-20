@@ -4,7 +4,6 @@
 //   -> Fonts, Variables
 //
 // *************************************
-
 @font-face {
   font-family: 'Calendas';
   font-style: normal;
@@ -40,8 +39,8 @@
 
 // ----- Base Colors ----- //
 
-$base-background: #fff;
-$base-color: #222;
+$base-background: #f5f4f0;
+$base-color: #4a4a4a;
 $base-link-color: #0053c9;
 
 // ----- Base Borders & Box Shadows ----- //
@@ -53,7 +52,7 @@ $base-boxShadow: 0 1px 2px rgba($base-color, 0.25);
 // ----- Base Content ----- //
 
 $base-fontFamily: 'Calendas', Georgia, serif;
-$base-fontSize: 16px;
+$base-fontSize: 20px;
 $base-lineHeight: 1.5;
 
 // ----- Base Layout ----- //
@@ -65,7 +64,6 @@ $base-whitespace: 20px;
 $c-header-fontFamily: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 
 // ----- Layout ----- //
-
 $l-maxWidth: 780px;
 
 // ----- Media Queries ----- //

@@ -18,7 +18,9 @@ h4, h5, h6 {
 }
 
 h1, .c-h1, %c-h1 {
-  font-size: rem(40px)
+  font-size: rem(40px);
+  font-weight: bold;
+  line-height: 1.5;
 }
 
 h2, .c-h2, %c-h2 {
