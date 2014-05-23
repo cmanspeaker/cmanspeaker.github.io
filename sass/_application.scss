@@ -24,6 +24,9 @@ fieldset {
 
 .meta {
   font-family: $c-header-fontFamily;
+  text-transform: uppercase;
+  color: lighten($base-color, 25%);
+  font-size: rem(16px);
 }
 
 .main-navigation {
