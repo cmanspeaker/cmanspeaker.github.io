@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[manspeaker]]></title>
-  <link href="http://cmanspeaker.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: code | manspeaker]]></title>
+  <link href="http://cmanspeaker.github.io/categories/code/atom.xml" rel="self"/>
   <link href="http://cmanspeaker.github.io/"/>
   <updated>2014-05-22T11:10:27-04:00</updated>
   <id>http://cmanspeaker.github.io/</id>
@@ -37,35 +37,21 @@
 
 <p>This will be the biggest area where you&rsquo;ll more than likely have the most revisions. Less prefixes variables with @ while Sass uses $</p>
 
-<figure class='code'><figcaption><span>Variables</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="c1">// LESS</span>
-</span><span class='line'><span class="k">@var1</span><span class="nd">:</span> <span class="nt">12</span><span class="o">;</span>
-</span><span class='line'><span class="k">@var2</span><span class="nd">:</span> <span class="nt">30</span><span class="o">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// SASS</span>
-</span><span class='line'><span class="nv">$var1</span><span class="o">:</span> <span class="mi">12</span><span class="err">;</span>
-</span><span class='line'><span class="nv">$var2</span><span class="o">:</span> <span class="mi">30</span><span class="err">;</span>
-</span></code></pre></td></tr></table></div></figure>
+<p>``` sass Variables</p>
 
+<p>// LESS
+@var1: 12;
+@var2: 30;</p>
+
+<p>// SASS
+$var1: 12;
+$var2: 30;</p>
+
+<p>```</p>
 
 <h3>Mixins</h3>
 
 <p>This will be the biggest area where you&rsquo;ll more than likely have the most revisions. Less prefixes variables with @ while Sass uses $</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Just do it]]></title>
-    <link href="http://cmanspeaker.github.io/2014/05/07/just-do-it/"/>
-    <updated>2014-05-07T21:45:02-04:00</updated>
-    <id>http://cmanspeaker.github.io/2014/05/07/just-do-it</id>
-    <content type="html"><![CDATA[<p>I&rsquo;ve had tons of ideas over the years but that is mostly all they&rsquo;ve been. Thinking of great ideas of things to design and build are awesome but really doesn&rsquo;t amount to much if you don&rsquo;t actually try to execute them.</p>
 ]]></content>
   </entry>
   
