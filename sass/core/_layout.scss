@@ -15,7 +15,7 @@
   // @extend %debug;
 }
 
-hgroup {
+header[role=banner] {
   @extend %l-container;
 }
   // @include breakpoint(23em) {
