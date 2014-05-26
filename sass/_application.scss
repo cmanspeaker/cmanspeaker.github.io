@@ -18,13 +18,19 @@
 // -------------------------------------
 //   Inbox
 // -------------------------------------
-fieldset {
-  border: none;
+input, fieldset, form {
+  display: block;
 }
 
 hgroup,
 nav[role=navigation] {
-  display: inline-block;
+  display: block;
+  @extend %l-space;
+}
+
+input {
+  font-family: $c-header-fontFamily;
+  width: 99%;
 }
 
 .meta {
@@ -34,8 +40,10 @@ nav[role=navigation] {
   font-size: rem(16px);
 }
 
-.main-navigation {
-  list-style: none;
+.main-navigation,
+.categories {
+  @extend %c-unstyled;
+  @extend %l-space;
   li {
     display: inline-block;
   }
