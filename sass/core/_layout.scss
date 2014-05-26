@@ -15,7 +15,8 @@
   // @extend %debug;
 }
 
-header[role=banner] {
+header[role=banner],
+footer[role=contentinfo] {
   @extend %l-container;
 }
   // @include breakpoint(23em) {
