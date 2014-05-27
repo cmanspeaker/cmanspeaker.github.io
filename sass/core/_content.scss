@@ -18,15 +18,16 @@ h4, h5, h6 {
 }
 
 h1, .c-h1, %c-h1 {
+  @extend %l-space;
   font-size: rem(40px);
   font-weight: bold;
   line-height: 1;
-  @extend %l-space;
   a {
+    @include transition(color 0.2s ease-out);
     color: $base-color;
     &:hover {
-      text-decoration: none;
       color: $base-link-color;
+      text-decoration: none;
     }
   }
 }
