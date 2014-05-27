@@ -9,7 +9,7 @@
 {% endunless %}
     {% unless page.meta == false %}
       <aside class="meta">
-        {% include post/date.html %}{{ time }}
+        <span>{% include post/date.html %}{{ time }}</span>
         {% include post/categories.html %}
       </aside>
     {% endunless %}

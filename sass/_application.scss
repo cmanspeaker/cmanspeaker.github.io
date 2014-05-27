@@ -37,6 +37,9 @@ input {
   font-family: $c-header-fontFamily;
   color: lighten($base-color, 25%);
   font-size: rem(16px);
+  span {
+    text-transform: uppercase;
+  }
 }
 
 .main-navigation,
