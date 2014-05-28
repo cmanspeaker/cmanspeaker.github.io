@@ -14,8 +14,7 @@
   // @extend %debug;
 }
 
-header[role=banner],
-footer[role=contentinfo] {
+header[role=banner] {
   @extend %l-container;
 }
   // @include breakpoint(23em) {
@@ -24,6 +23,10 @@ footer[role=contentinfo] {
   // @include breakpoint(66.25em) {
   //   width: 100%;
   // }
+
+footer[role=contentinfo] {
+  background: #333;
+}
 
 article {
   padding-left: 20%;
