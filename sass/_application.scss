@@ -41,6 +41,11 @@ input {
     text-transform: uppercase;
     letter-spacing: 1px;
   }
+  @include breakpoint(48em) {
+    float: left;
+    width: 20%;
+    margin-left: -25%;
+  }
 }
 
 .main-navigation,

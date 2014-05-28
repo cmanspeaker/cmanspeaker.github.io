@@ -9,8 +9,7 @@
 %l-container {
   margin: 0 auto;
   width: 85%;
-  max-width: 61.25em;
-  max-width: 500px;
+  max-width: 40em;
   //@extend %l-space;
   // @extend %debug;
 }
@@ -25,6 +24,11 @@ footer[role=contentinfo] {
   // @include breakpoint(66.25em) {
   //   width: 100%;
   // }
+
+article {
+  padding-left: 20%;
+}
+
 // -------------------------------------
 //   Utilities
 // -------------------------------------
