@@ -41,11 +41,6 @@ input {
     text-transform: uppercase;
     letter-spacing: 1px;
   }
-  @include breakpoint(48em) {
-    float: left;
-    width: 20%;
-    margin-left: -25%;
-  }
 }
 
 .main-navigation,
@@ -57,7 +52,12 @@ input {
   }
 }
 
+.subscription li:first-child:after {
+  content: " • ";
+  padding: 0 0.25em 0 0.5em;
+  display: inline-block;
+}
+
 .imgtest {
-  width: 100px;
   border-radius: 0.5em;
 }

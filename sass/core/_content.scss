@@ -56,6 +56,11 @@ h6, .c-h6, %c-h6 {
 // -------------------------------------
 //   Utilities
 // -------------------------------------
+.c-img-scale {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
 
 %c-center, .c-center {
   text-align: center;

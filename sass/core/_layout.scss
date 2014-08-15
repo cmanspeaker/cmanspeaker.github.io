@@ -26,10 +26,23 @@ header[role=banner] {
 
 footer[role=contentinfo] {
   background: #333;
+  font-size: rem(15px);
+  font-family: $c-header-fontFamily;
 }
 
-article {
-  padding-left: 20%;
+.card {
+  @extend %group;
+}
+
+.card-image {
+  float: left;
+  overflow: hidden;
+  width: 25%;
+}
+
+.card-content {
+  float: right;
+  width: 70%;
 }
 
 // -------------------------------------
