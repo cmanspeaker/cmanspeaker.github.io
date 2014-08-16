@@ -6,11 +6,12 @@ url: http://cmanspeaker.github.io
 title: manspeaker
 subtitle:
 author: Cliff Manspeaker
-simple_search: https://www.google.com/search
+simple_search:
 description:
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
+# https://www.google.com/search
 # http://www.ruby-doc.org/core-1.9.2/Time.html#method-i-strftime
 # Additionally, %o will give you the ordinal representation of the day
 date_format: "%b %e, %Y"
