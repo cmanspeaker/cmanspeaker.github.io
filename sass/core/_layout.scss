@@ -25,10 +25,14 @@ header[role=banner] {
   // }
 
 footer[role=contentinfo] {
-  background: #333;
+  background: #01579b;
+  color: #b3e5fc;
   font-family: $c-header-fontFamily;
   font-size: rem(16px);
   padding: 2em 0 1em;
+  a {
+    color: $footer-link-color;
+  }
 }
 
 .card {
@@ -39,6 +43,7 @@ footer[role=contentinfo] {
   float: left;
   overflow: hidden;
   width: 25%;
+  border-radius: 0.5em;
 }
 
 .card-content {

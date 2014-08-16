@@ -18,24 +18,24 @@
 // -------------------------------------
 //   Inbox
 // -------------------------------------
-input, fieldset, form {
-  display: block;
-}
+// input, fieldset, form {
+//   display: block;
+// }
 
-hgroup,
-nav[role=navigation] {
-  display: block;
-  @extend %l-space;
-}
+// hgroup,
+// nav[role=navigation] {
+//   display: block;
+//   @extend %l-space;
+// }
 
-input {
-  font-family: $c-header-fontFamily;
-  width: 99%;
-  border: none;
-  background: none;
-  border-bottom: 1px solid #fff;
-  color: white !important;
-}
+// input {
+//   font-family: $c-header-fontFamily;
+//   width: 99%;
+//   border: none;
+//   background: none;
+//   border-bottom: 1px solid #fff;
+//   color: white !important;
+// }
 
 .meta {
   font-family: $c-header-fontFamily;
