@@ -1,9 +1,0 @@
----
-layout: post
-title: "Just do it"
-date: 2014-05-07 21:45:02 -0400
-comments: true
-categories:
----
-
-I've had tons of ideas over the years but that is mostly all they've been. Thinking of great ideas of things to design and build are awesome but really doesn't amount to much if you don't actually try to execute them.
