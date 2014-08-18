@@ -6,9 +6,9 @@ url: http://cmanspeaker.github.io
 title: manspeaker
 subtitle:
 author: Cliff Manspeaker
-#simple_search:
-description:
+description: Description of site
 
+#simple_search:
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
 # https://www.google.com/search
@@ -44,7 +44,7 @@ pygments: false # default python pygments have been replaced by pygments.rb
 
 paginate: 10          # Posts per page on the articles index
 pagination_dir:  # Directory base for pagination URLs eg. /articles/page/2/
-recent_posts: 5       # Posts in the sidebar Recent Posts section
+recent_posts: 5      # Posts in the sidebar Recent Posts section
 excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
 
 titlecase: true       # Converts page and post titles to titlecase
