@@ -8,24 +8,21 @@
 .l-container,
 %l-container {
   margin: 0 auto;
-  width: 85%;
+  width: 80%;
   max-width: 40em;
   //@extend %l-space;
   // @extend %debug;
 }
 
 header[role=banner] {
-  @extend %l-space;
+  background: #9e9e9e;
+  img {
+    padding: 0.625em 0 0.25em;
+  }
 }
-  // @include breakpoint(23em) {
-  //   width: 85%;
-  // }
-  // @include breakpoint(66.25em) {
-  //   width: 100%;
-  // }
 
 footer[role=contentinfo] {
-  background: #01579b;
+  background: #424242;
   color: #b3e5fc;
   font-family: $c-header-fontFamily;
   font-size: rem(16px);
@@ -82,4 +79,8 @@ article {
 
 %l-xspace, .l-xspace {
   margin-bottom: rem($base-whitespace * 2);
+}
+
+%l-sspace, .l-sspace {
+  margin-bottom: rem($base-whitespace / 2);
 }
