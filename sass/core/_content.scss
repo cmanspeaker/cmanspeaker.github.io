@@ -53,6 +53,24 @@ h6, .c-h6, %c-h6 {
   font-size: rem(16px);
 }
 
+.c-social li {
+  border-top: 1px solid #0277bd;
+  &:last-child {
+    border-bottom: 1px solid #0277bd;
+  }
+  i {
+    padding-right: 0.375em;
+  }
+  a {
+    display: block;
+    padding: 0.375em 0.5em 0.25em;
+    &:hover {
+      text-decoration: none;
+      background-color: #0288d1;
+    }
+  }
+}
+
 // -------------------------------------
 //   Utilities
 // -------------------------------------
