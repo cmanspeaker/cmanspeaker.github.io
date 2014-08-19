@@ -53,37 +53,6 @@ h6, .c-h6, %c-h6 {
   font-size: rem(16px);
 }
 
-.credit {
-  clear: both;
-}
-
-.c-social {
-  @include breakpoint(35em) {
-    width: 35%;
-    float: right;
-  }
-}
-
-.c-social li {
-  font-size: rem(16px);
-  border-top: 1px solid #0277bd;
-  &:last-child {
-    border-bottom: 1px solid #0277bd;
-  }
-  i {
-    padding-right: 0.375em;
-  }
-  a {
-    @include transition(all 0.2s ease-out);
-    display: block;
-    padding: 0.375em 0.5em 0.25em;
-    &:hover {
-      text-decoration: none;
-      background-color: #0288d1;
-    }
-  }
-}
-
 // -------------------------------------
 //   Utilities
 // -------------------------------------

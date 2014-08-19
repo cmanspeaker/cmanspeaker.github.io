@@ -36,10 +36,6 @@ article {
 
 .card {
   @extend %group;
-  @include breakpoint(35em) {
-    width: 60%;
-    float: left;
-  }
 }
 
 .card-image {
