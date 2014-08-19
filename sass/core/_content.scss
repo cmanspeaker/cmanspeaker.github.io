@@ -53,7 +53,19 @@ h6, .c-h6, %c-h6 {
   font-size: rem(16px);
 }
 
+.credit {
+  clear: both;
+}
+
+.c-social {
+  @include breakpoint(35em) {
+    width: 35%;
+    float: right;
+  }
+}
+
 .c-social li {
+  font-size: rem(16px);
   border-top: 1px solid #0277bd;
   &:last-child {
     border-bottom: 1px solid #0277bd;

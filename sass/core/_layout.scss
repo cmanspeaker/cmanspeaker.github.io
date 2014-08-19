@@ -10,8 +10,6 @@
   margin: 0 auto;
   width: 80%;
   max-width: 40em;
-  //@extend %l-space;
-  // @extend %debug;
 }
 
 header[role=banner] {
@@ -25,7 +23,6 @@ footer[role=contentinfo] {
   background: #424242;
   color: #b3e5fc;
   font-family: $c-header-fontFamily;
-  font-size: rem(16px);
   padding: 2em 0 1em;
   a {
     color: $footer-link-color;
@@ -39,6 +36,10 @@ article {
 
 .card {
   @extend %group;
+  @include breakpoint(35em) {
+    width: 60%;
+    float: left;
+  }
 }
 
 .card-image {
