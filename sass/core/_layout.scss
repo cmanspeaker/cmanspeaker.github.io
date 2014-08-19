@@ -13,9 +13,12 @@
 }
 
 header[role=banner] {
-  background: #9e9e9e;
+  background: #ffffff;
   img {
     padding: 0.625em 0 0.25em;
+  }
+  a {
+    border-bottom: none;
   }
 }
 
