@@ -41,8 +41,11 @@ footer[role=contentinfo] {
 }
 
 article {
-  padding: 1em 0;
+  padding: 1em 0 1.25em;
   border-bottom: 1px solid #b3e5fc;
+  &:last-child {
+    border-bottom: none;
+  }
 }
 
 .card {
