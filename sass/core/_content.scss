@@ -23,8 +23,8 @@ h1, .c-h1, %c-h1 {
   font-weight: bold;
   line-height: 1;
   a {
-    @include transition(color 0.2s ease-out);
     color: $base-color;
+    border-bottom: 2px solid $base-color;
     &:hover {
       color: $base-link-color;
       text-decoration: none;

@@ -3,7 +3,7 @@ layout: post
 title: "Convert LESS to Sass"
 date: 2014-05-08 10:29:54 -0400
 comments: true
-categories: [code]
+categories: [Code]
 ---
 
 In my quest of building out a starting point for my web projects, I researched and tested out quite a bit of the CSS frameworks out there. I was looking for a grid system that would be pretty straightforward for me to pick up and be as universal as possible for responsive and different browsers environments (I'm looking at you IE 6-8)
