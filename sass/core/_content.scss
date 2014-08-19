@@ -54,6 +54,15 @@ h6, .c-h6, %c-h6 {
   font-size: rem(16px);
 }
 
+blockquote {
+  font-style: italic;
+  font-size: 1.125em;
+  color: lighten($base-color, 10%);
+  p {
+    padding-left: 2.25em;
+    border-left: 3px solid #b3e5fc;
+  }
+}
 // -------------------------------------
 //   Utilities
 // -------------------------------------

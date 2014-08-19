@@ -1,0 +1,3 @@
+echo 'manspeaker.com' >> source/CNAME
+# OR
+echo 'www.manspeaker.com' >> source/CNAME

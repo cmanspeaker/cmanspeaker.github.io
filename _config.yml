@@ -3,10 +3,10 @@
 # ----------------------- #
 
 url: http://cmanspeaker.github.io
-title: manspeaker
+title: Manspeaker - online home of Cliff Manspeaker
 subtitle:
 author: Cliff Manspeaker
-description: Description of site
+description: Website for Cliff Manspeaker
 
 #simple_search:
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
@@ -71,7 +71,6 @@ github_skip_forks: false
 
 # Twitter
 twitter_user: cmanspeaker
-twitter_tweet_button: false
 
 # Google +1
 google_plus_one: false
