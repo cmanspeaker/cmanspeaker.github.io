@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Life skills | manspeaker]]></title>
+  <link href="http://cmanspeaker.github.io/categories/life-skills/atom.xml" rel="self"/>
+  <link href="http://cmanspeaker.github.io/"/>
+  <updated>2014-08-19T09:42:40-04:00</updated>
+  <id>http://cmanspeaker.github.io/</id>
+  <author>
+    <name><![CDATA[Cliff Manspeaker]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[It's about time]]></title>
+    <link href="http://cmanspeaker.github.io/2014/08/18/its-about-time/"/>
+    <updated>2014-08-18T08:43:25-04:00</updated>
+    <id>http://cmanspeaker.github.io/2014/08/18/its-about-time</id>
+    <content type="html"><![CDATA[<p>After months, no years, I&rsquo;m finally launching a blog. Based on what you are seeing now, this looks like it shouldn&rsquo;t have taken that long. The problem was that I got in the way.</p>
+
+<!--more-->
+
+
+<h3>Paralysis by analysis</h3>
+
+<p>When I first started developing for the web, I thought it would be a good practice to set up a page for myself to keep an idea of thoughts, help explain the processes I used during my development, etc. Things always kept getting in the way, at least in my mind.</p>
+
+<p>I would debate about which platform I would build my blog on. Should I use Wordpress, Tumblr, just stick to Twitter or make my own custom build? That was about a month of debate and then it got put on the back burner. You start getting busy with client work and you eventually stop thinking about it. Work would start to slow down a bit and I&rsquo;d tell myself that I really need to get back to working on a blog.</p>
+
+<h4>The neverending question loop</h4>
+
+<p>These are the questions that would constantly come back everytime I would get started</p>
+
+<ul>
+<li>What layout and colors would work best?</li>
+<li>What am I going to write about?</li>
+<li>What if no one reads it?</li>
+<li>What can I really bring to the table?</li>
+<li>Why am I doing this anyway?</li>
+</ul>
+
+
+<p>I finally decided to get back to making this priority at the beginning of the year. A big inspiration to me was reading the book,  <a href="http://executebook.com/" title="The Execute Book">Execute</a>, which had the mantra of just create, not just keep thinking about it. It came down to throwing the questions out of the window and just building. This was a tough process for me as I kept going back to my old ways of thinking. It really comes down to executing something.</p>
+
+<p>When I look at what I have now for my blog, I keep telling myself its not final. Maybe I&rsquo;ll tweak things here and there, possibly add some features, etc. But the main point is that its live and its out there. Now I can start tracking traffic and make adjustments where needed or how I see fit.</p>
+
+<p>Next steps will be to get a schedule for posting that is realistic and take it one day at a time. Thank you for your patience.</p>
+]]></content>
+  </entry>
+  
+</feed>

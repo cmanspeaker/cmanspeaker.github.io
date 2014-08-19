@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[manspeaker]]></title>
+  <link href="http://cmanspeaker.github.io/atom.xml" rel="self"/>
+  <link href="http://cmanspeaker.github.io/"/>
+  <updated>2014-08-19T09:42:40-04:00</updated>
+  <id>http://cmanspeaker.github.io/</id>
+  <author>
+    <name><![CDATA[Cliff Manspeaker]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[It's about time]]></title>
+    <link href="http://cmanspeaker.github.io/2014/08/18/its-about-time/"/>
+    <updated>2014-08-18T08:43:25-04:00</updated>
+    <id>http://cmanspeaker.github.io/2014/08/18/its-about-time</id>
+    <content type="html"><![CDATA[<p>After months, no years, I&rsquo;m finally launching a blog. Based on what you are seeing now, this looks like it shouldn&rsquo;t have taken that long. The problem was that I got in the way.</p>
+
+<!--more-->
+
+
+<h3>Paralysis by analysis</h3>
+
+<p>When I first started developing for the web, I thought it would be a good practice to set up a page for myself to keep an idea of thoughts, help explain the processes I used during my development, etc. Things always kept getting in the way, at least in my mind.</p>
+
+<p>I would debate about which platform I would build my blog on. Should I use Wordpress, Tumblr, just stick to Twitter or make my own custom build? That was about a month of debate and then it got put on the back burner. You start getting busy with client work and you eventually stop thinking about it. Work would start to slow down a bit and I&rsquo;d tell myself that I really need to get back to working on a blog.</p>
+
+<h4>The neverending question loop</h4>
+
+<p>These are the questions that would constantly come back everytime I would get started</p>
+
+<ul>
+<li>What layout and colors would work best?</li>
+<li>What am I going to write about?</li>
+<li>What if no one reads it?</li>
+<li>What can I really bring to the table?</li>
+<li>Why am I doing this anyway?</li>
+</ul>
+
+
+<p>I finally decided to get back to making this priority at the beginning of the year. A big inspiration to me was reading the book,  <a href="http://executebook.com/" title="The Execute Book">Execute</a>, which had the mantra of just create, not just keep thinking about it. It came down to throwing the questions out of the window and just building. This was a tough process for me as I kept going back to my old ways of thinking. It really comes down to executing something.</p>
+
+<p>When I look at what I have now for my blog, I keep telling myself its not final. Maybe I&rsquo;ll tweak things here and there, possibly add some features, etc. But the main point is that its live and its out there. Now I can start tracking traffic and make adjustments where needed or how I see fit.</p>
+
+<p>Next steps will be to get a schedule for posting that is realistic and take it one day at a time. Thank you for your patience.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Convert Less to Sass]]></title>
+    <link href="http://cmanspeaker.github.io/2014/07/08/convert-less-to-sass/"/>
+    <updated>2014-07-08T10:29:54-04:00</updated>
+    <id>http://cmanspeaker.github.io/2014/07/08/convert-less-to-sass</id>
+    <content type="html"><![CDATA[<p>When I was first introduced to CSS preprocessors, I started out with learning the Sass syntax. I&rsquo;ve been researching different CSS frameworks and ran into a couple of instances where Less was used for its development. I went through the process of converting a Less version over to Sass to test it out in my local environment.</p>
+
+<!--more-->
+
+
+<p>Overall the syntax for Less and Sass are pretty similar in some aspects with slight differences between the two. There are some larger differences depending on the complexity of the code involved but this post will serve as a basic guide to get started.  I&rsquo;m sure there are some converters out there or in the works but I&rsquo;d suggest handling this manually. Its a good way to get familiar with the code and see how all of the parts work together with one another.</p>
+
+<p>The first step would be to rename your files with the .less file extension over to .scss or .sass based on your syntax preference.</p>
+
+<h3>Imports</h3>
+
+<p>Imports will remain the same with using the <code>@import</code> syntax to pull in your various source files.</p>
+
+<h3>Variables</h3>
+
+<p>This will be the biggest area where you&rsquo;ll more than likely have the most revisions. Less prefixes variables with @ while Sass uses $</p>
+
+<figure class='code'><figcaption><span>Variables</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="c1">// LESS</span>
+</span><span class='line'><span class="k">@var1</span><span class="nd">:</span> <span class="nt">12</span><span class="o">;</span>
+</span><span class='line'><span class="k">@var2</span><span class="nd">:</span> <span class="nt">30</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// SASS</span>
+</span><span class='line'><span class="nv">$var1</span><span class="o">:</span> <span class="mi">12</span><span class="err">;</span>
+</span><span class='line'><span class="nv">$var2</span><span class="o">:</span> <span class="mi">30</span><span class="err">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Mixins</h3>
+
+<p>With Sass, you will include the @mixin declaration and call it later in another property using @include. Less treats its syntax like a class name and does not use the mixin or include declarations. Mixins that use arguments will be set in the parentheses with the differences being the variables syntax (@ &ndash; Less or $ &ndash; Sass)</p>
+
+<figure class='code'><figcaption><span>Mixins</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="c1">// LESS</span>
+</span><span class='line'><span class="nc">.border-radius</span><span class="o">(@</span><span class="nt">radius</span><span class="o">)</span> <span class="err">{</span>
+</span><span class='line'>  <span class="na">-webkit-border-radius</span><span class="o">:</span> <span class="o">@</span><span class="n">radius</span><span class="err">;</span>
+</span><span class='line'>  <span class="na">-moz-border-radius</span><span class="o">:</span> <span class="o">@</span><span class="n">radius</span><span class="err">;</span>
+</span><span class='line'>  <span class="na">-ms-border-radius</span><span class="o">:</span> <span class="o">@</span><span class="n">radius</span><span class="err">;</span>
+</span><span class='line'>    <span class="na">border-radius</span><span class="o">:</span> <span class="o">@</span><span class="n">radius</span><span class="err">;</span>
+</span><span class='line'><span class="err">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nc">.box</span> <span class="err">{</span>
+</span><span class='line'>  <span class="nc">.border-radius</span><span class="o">(</span><span class="nt">5px</span><span class="o">);</span>
+</span><span class='line'>  <span class="na">width</span><span class="o">:</span> <span class="mi">50</span><span class="kt">%</span><span class="err">;</span>
+</span><span class='line'><span class="err">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// SASS</span>
+</span><span class='line'><span class="k">@mixin</span><span class="nf"> border-radius</span><span class="p">(</span><span class="nv">$radius</span><span class="p">)</span> <span class="err">{</span>
+</span><span class='line'>  <span class="na">-webkit-border-radius</span><span class="o">:</span> <span class="nv">$radius</span><span class="err">;</span>
+</span><span class='line'>  <span class="na">-moz-border-radius</span><span class="o">:</span> <span class="nv">$radius</span><span class="err">;</span>
+</span><span class='line'>  <span class="na">-ms-border-radius</span><span class="o">:</span> <span class="nv">$radius</span><span class="err">;</span>
+</span><span class='line'>  <span class="na">border-radius</span><span class="o">:</span> <span class="nv">$radius</span><span class="err">;</span>
+</span><span class='line'><span class="err">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nc">.box</span> <span class="err">{</span>
+</span><span class='line'>  <span class="k">@include</span><span class="nd"> border-radius</span><span class="p">(</span><span class="mi">5</span><span class="kt">px</span><span class="p">)</span><span class="err">;</span>
+</span><span class='line'>  <span class="na">width</span><span class="o">:</span> <span class="mi">50</span><span class="kt">%</span><span class="err">;</span>
+</span><span class='line'><span class="err">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+</feed>
