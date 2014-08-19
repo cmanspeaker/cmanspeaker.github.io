@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: code | manspeaker]]></title>
+  <title><![CDATA[Category: Code | Manspeaker - online home of Cliff Manspeaker]]></title>
   <link href="http://cmanspeaker.github.io/categories/code/atom.xml" rel="self"/>
   <link href="http://cmanspeaker.github.io/"/>
-  <updated>2014-05-22T11:10:27-04:00</updated>
+  <updated>2014-08-19T09:40:15-04:00</updated>
   <id>http://cmanspeaker.github.io/</id>
   <author>
     <name><![CDATA[Cliff Manspeaker]]></name>
@@ -14,20 +14,18 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Convert LESS to Sass]]></title>
-    <link href="http://cmanspeaker.github.io/2014/05/08/convert-less-to-sass/"/>
-    <updated>2014-05-08T10:29:54-04:00</updated>
-    <id>http://cmanspeaker.github.io/2014/05/08/convert-less-to-sass</id>
-    <content type="html"><![CDATA[<p>In my quest of building out a starting point for my web projects, I researched and tested out quite a bit of the CSS frameworks out there. I was looking for a grid system that would be pretty straightforward for me to pick up and be as universal as possible for responsive and different browsers environments (I&rsquo;m looking at you IE 6-8)</p>
-
-<p>I was first introduced to Sass and have been using it since without looking at Less or Stylus as I really didn&rsquo;t have the need. In my CSS framework testing, I ran into a system that was based on Less that didn&rsquo;t have a Sass alternative so I decided to start to convert it over to Sass to try it out. Unfortunately this wasn&rsquo;t the grid system I was looking for but glad to have this experience if I run into any other Less projects in the future.</p>
+    <title type="html"><![CDATA[Convert Less to Sass]]></title>
+    <link href="http://cmanspeaker.github.io/2014/07/08/convert-less-to-sass/"/>
+    <updated>2014-07-08T10:29:54-04:00</updated>
+    <id>http://cmanspeaker.github.io/2014/07/08/convert-less-to-sass</id>
+    <content type="html"><![CDATA[<p>When I was first introduced to CSS preprocessors, I started out with learning the Sass syntax. I&rsquo;ve been researching different CSS frameworks and ran into a couple of instances where Less was used for its development. I went through the process of converting a Less version over to Sass to test it out in my local environment.</p>
 
 <!--more-->
 
 
-<p>Overall the syntax for Less and Sass are pretty similar in some aspects so as long as its not too involved, it should be pretty straightforward to convert over. I&rsquo;m sure there are some converters out there or in the works but think its a good practice to handle this manually. Its a good way to get familiar with the code and see how all of the parts work together with one another.</p>
+<p>Overall the syntax for Less and Sass are pretty similar in some aspects with slight differences between the two. There are some larger differences depending on the complexity of the code involved but this post will serve as a basic guide to get started.  I&rsquo;m sure there are some converters out there or in the works but I&rsquo;d suggest handling this manually. Its a good way to get familiar with the code and see how all of the parts work together with one another.</p>
 
-<p>The obvious first step would be to rename your files with the .less file extension over to .scss or .sass. I personally use the .scss formatting on my Sass files so I&rsquo;ve used that file extension.</p>
+<p>The first step would be to rename your files with the .less file extension over to .scss or .sass based on your syntax preference.</p>
 
 <h3>Imports</h3>
 
@@ -51,7 +49,40 @@ $var2: 30;</p>
 
 <h3>Mixins</h3>
 
-<p>This will be the biggest area where you&rsquo;ll more than likely have the most revisions. Less prefixes variables with @ while Sass uses $</p>
+<p>With Sass, you will include the @mixin declaration and call it later in another property using @include. Less treats its syntax like a class name and does not use the mixin or include declarations. Mixins that use arguments will be set in the parentheses with the differences being the variables syntax (@ &ndash; Less or $ &ndash; Sass)</p>
+
+<p>``` sass Mixins</p>
+
+<p>// LESS
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;</p>
+
+<pre><code>border-radius: @radius;
+</code></pre>
+
+<p>}</p>
+
+<p>.box {
+  .border-radius(5px);
+  width: 50%;
+}</p>
+
+<p>// SASS
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}</p>
+
+<p>.box {
+  @include border-radius(5px);
+  width: 50%;
+}</p>
+
+<p>```</p>
 ]]></content>
   </entry>
   
