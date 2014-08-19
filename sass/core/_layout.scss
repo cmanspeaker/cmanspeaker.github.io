@@ -9,7 +9,7 @@
 %l-container {
   margin: 0 auto;
   width: 80%;
-  max-width: 40em;
+  max-width: 700px;
 }
 
 header[role=banner] {
@@ -19,13 +19,24 @@ header[role=banner] {
   }
 }
 
+section {
+  padding: 1em 0;
+}
+
 footer[role=contentinfo] {
   background: #424242;
   color: #b3e5fc;
+  font-size: 0.75em;
   font-family: $c-header-fontFamily;
   padding: 2em 0 1em;
   a {
-    color: $footer-link-color;
+    color: #b3e5fc;
+    border-bottom: 1px solid #b3e5fc;
+    &:hover {
+      text-decoration: none;
+      border-bottom: none;
+      color: #fff;
+    }
   }
 }
 
@@ -39,15 +50,33 @@ article {
 }
 
 .card-image {
-  float: left;
-  overflow: hidden;
-  width: 25%;
-  border-radius: 0.5em;
+  width: 45%;
+  margin-bottom: 0.5em;
+  img {
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    border-radius: 0.5em;
+  }
+  @include breakpoint(30em) {
+    float: left;
+    width: 30%;
+  }
+  @include breakpoint(41em) {
+    float: left;
+    width: 20%;
+  }
 }
 
 .card-content {
-  float: right;
-  width: 70%;
+  @include breakpoint(30em) {
+    float: right;
+    width: 65%;
+  }
+  @include breakpoint(41em) {
+    font-size: 1.125em;
+    float: right;
+    width: 72%;
+  }
 }
 
 // -------------------------------------
