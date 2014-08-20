@@ -24,7 +24,7 @@ These are the questions that would constantly come back everytime I would get st
 
 I finally decided to get back to making this priority at the beginning of the year. A big inspiration to me was reading the book,  [Execute](http://executebook.com/ "The Execute Book"), which had the mantra of just create, not just keep thinking about it. It came down to throwing the questions out of the window and just building. This was a tough process for me as I kept going back to my old ways of thinking. It really comes down to executing something.
 
-When I look at what I have now for my blog, I keep telling myself its not final. Maybe I'll tweak things here and there, possibly add some features, etc. But the main point is that its live and its out there. Now I can start tracking traffic and make adjustments where needed or how I see fit.
+When I look at what I have now for my blog, I keep telling myself it's not final. Maybe I'll tweak things here and there, possibly add some features, etc. But the main point is that it's live and it's out there. Now I can start tracking traffic and make adjustments where needed or how I see fit.
 
 Next steps will be to get a schedule for posting that is realistic and take it one day at a time. Thank you for your patience.
 

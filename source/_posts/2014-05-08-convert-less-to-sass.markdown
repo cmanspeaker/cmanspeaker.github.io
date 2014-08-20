@@ -6,7 +6,7 @@ comments: true
 categories: [Code]
 ---
 
-When I was first introduced to CSS preprocessors, I started out with learning the Sass syntax. I've been researching different CSS frameworks and ran into a couple of instances where Less was used for its development. I went through the process of converting a Less version over to Sass to test it out in my local environment.
+When I was first introduced to CSS preprocessors, I started out with learning the Sass syntax. I’ve been researching different CSS frameworks and ran into a couple of instances where Less was used for their development. I went through the process of converting a Less version over to Sass to test it out in my local environment.
 <!--more-->
 Overall the syntax for Less and Sass are pretty similar in some aspects with slight differences between the two. There are some larger differences depending on the complexity of the code involved but this post will serve as a basic guide to get started.  I'm sure there are some converters out there or in the works but I'd suggest handling this manually. Its a good way to get familiar with the code and see how all of the parts work together with one another.
 
