@@ -2,15 +2,19 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://cmanspeaker.github.io/2014/07/08/convert-less-to-sass/</loc>
-        <lastmod>2014-08-20T06:52:09-04:00</lastmod>
+        <lastmod>2014-12-17T12:11:24-05:00</lastmod>
     </url>
     <url>
         <loc>http://cmanspeaker.github.io/2014/08/18/its-about-time/</loc>
-        <lastmod>2014-08-20T06:52:09-04:00</lastmod>
+        <lastmod>2014-12-17T12:11:24-05:00</lastmod>
     </url>
     <url>
         <loc>http://cmanspeaker.github.io/2014/09/08/just-because-you-know-it/</loc>
-        <lastmod>2014-09-09T21:28:59-04:00</lastmod>
+        <lastmod>2014-12-17T12:11:24-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cmanspeaker.github.io/2014/10/26/acknowledgement/</loc>
+        <lastmod>2014-12-17T12:11:24-05:00</lastmod>
     </url>
     <url>
         <loc>http://cmanspeaker.github.io/about/</loc>
@@ -18,11 +22,11 @@
     </url>
     <url>
         <loc>http://cmanspeaker.github.io/archives/</loc>
-        <lastmod>2014-09-09T21:28:59-04:00</lastmod>
+        <lastmod>2014-12-17T12:11:24-05:00</lastmod>
     </url>
     <url>
         <loc>http://cmanspeaker.github.io/</loc>
-        <lastmod>2014-09-09T21:28:59-04:00</lastmod>
+        <lastmod>2014-12-17T12:11:24-05:00</lastmod>
     </url>
     <url>
         <loc>http://cmanspeaker.github.io/robots.txt</loc>
