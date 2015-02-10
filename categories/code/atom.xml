@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Code | Manspeaker - online home of Cliff Manspeaker]]></title>
   <link href="http://cmanspeaker.github.io/categories/code/atom.xml" rel="self"/>
   <link href="http://cmanspeaker.github.io/"/>
-  <updated>2014-12-17T12:13:30-05:00</updated>
+  <updated>2015-02-10T07:26:33-05:00</updated>
   <id>http://cmanspeaker.github.io/</id>
   <author>
     <name><![CDATA[Cliff Manspeaker]]></name>
@@ -12,6 +12,94 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[301 Redirects with multiple URL segments]]></title>
+    <link href="http://cmanspeaker.github.io/2015/02/09/301-redirects-with-multiple-url-segments/"/>
+    <updated>2015-02-09T20:43:20-05:00</updated>
+    <id>http://cmanspeaker.github.io/2015/02/09/301-redirects-with-multiple-url-segments</id>
+    <content type="html"><![CDATA[<p>I ran into an problem recently for a website redesign that had an entirely different URL structure compared to its previous version. As we wanted to help retain its current search engine rankings and not throw off any bookmarks from previous users, etc., we updated the site&rsquo;s <a href="http://httpd.apache.org/docs/current/howto/htaccess.html">htaccess</a> file to handle these new URLs.</p>
+
+<!--more-->
+
+
+<h3>Sample of the .htaccess file</h3>
+
+<p>``` apache .htaccess</p>
+
+<h1>URLs to redirect</h1>
+
+<p>Redirect 301 /folder    <a href="http://newsite.com/new-folder">http://newsite.com/new-folder</a>
+Redirect 301 /folder/folder2    <a href="http://newsite.com/new-folder2">http://newsite.com/new-folder2</a>
+Redirect 301 /folder/page    <a href="http://newsite.com/new-folder1">http://newsite.com/new-folder1</a></p>
+
+<p>Redirect 301 /folder2    <a href="http://newsite.com/new-folder2">http://newsite.com/new-folder2</a>
+Redirect 301 /folder2/page    <a href="http://newsite.com/new-folder">http://newsite.com/new-folder</a>
+Redirect 301 /folder2/page3    <a href="http://newsite.com/new-folder1">http://newsite.com/new-folder1</a></p>
+
+<p>```</p>
+
+<h3>The Problem</h3>
+
+<p>The issue that came up was due to once it hit the first entry, it was already firing off the redirect before it could apply the others. So in the above example, it would do the redirect for the first entry:</p>
+
+<hr />
+
+<p><strong>oldsite.com/<em>folder</em></strong><br/>
+<strong>newsite.com/<em><i style="color:green;">new-folder</i></em></strong></p>
+
+<hr />
+
+<p>That is great and what we want.</p>
+
+<p>The main problem that arrives after that is the other entries would not redirect correctly based off of the first redirect. It would redirect the other two entries like so:</p>
+
+<hr />
+
+<p><strong>oldsite.com/<em>folder/folder2</em></strong><br/>
+<strong>newsite.com/<em><i style="color:green;">new-folder</i>/<i style="color:red;">folder2</i></em></strong></p>
+
+<p><strong>oldsite.com/<em>folder/page</em></strong><br/>
+<strong>newsite.com/<em><i style="color:green;">new-folder</i>/<i style="color:red;">page</i></em></strong></p>
+
+<p>Instead of:</p>
+
+<p><strong>oldsite.com/<em>folder/folder2</em></strong><br/>
+<strong>newsite.com/<em><i style="color:green;">new-folder/new-folder2</i></em></strong></p>
+
+<p><strong>oldsite.com/<em>folder/page</em></strong><br/>
+<strong>newsite.com/<em><i style="color:green;">new-folder/new-folder1</i></em></strong></p>
+
+<hr />
+
+<p>So it was redirecting to the first folder correctly based on the new rule but all bets were off as it changed the path for the remaining.</p>
+
+<h3>The Solution</h3>
+
+<p>After much head scratching, google searching and experimenting, I finally found the answer in how the redirects were ordered to solve the problem.</p>
+
+<p>For all of your redirects involving multiple segments in the URL, place the single folder names at the bottom as they&rsquo;ll be run last. In this instance, all of the more specific redirects with more than one folder/pathname will run first and not affect your other redirects. The final redirects will contain your single folder names that can run without any issues as you&rsquo;ve already handled your more specific entries.</p>
+
+<h3>Revised Sample of the .htaccess file</h3>
+
+<p>``` apache .htaccess</p>
+
+<h1>URLs to redirect</h1>
+
+<p>Redirect 301 /folder/folder2    <a href="http://newsite.com/new-folder2">http://newsite.com/new-folder2</a>
+Redirect 301 /folder/page    <a href="http://newsite.com/new-folder1">http://newsite.com/new-folder1</a></p>
+
+<p>Redirect 301 /folder2/page    <a href="http://newsite.com/new-folder">http://newsite.com/new-folder</a>
+Redirect 301 /folder2/page3    <a href="http://newsite.com/new-folder1">http://newsite.com/new-folder1</a></p>
+
+<h1>Single folders last</h1>
+
+<p>Redirect 301 /folder    <a href="http://newsite.com/new-folder">http://newsite.com/new-folder</a>
+Redirect 301 /folder2    <a href="http://newsite.com/new-folder2">http://newsite.com/new-folder2</a></p>
+
+<p>```</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Just because you know it, doesn't make it easy to learn]]></title>

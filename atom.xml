@@ -4,7 +4,7 @@
   <title><![CDATA[Manspeaker - online home of Cliff Manspeaker]]></title>
   <link href="http://cmanspeaker.github.io/atom.xml" rel="self"/>
   <link href="http://cmanspeaker.github.io/"/>
-  <updated>2014-12-17T12:13:30-05:00</updated>
+  <updated>2015-02-10T07:26:33-05:00</updated>
   <id>http://cmanspeaker.github.io/</id>
   <author>
     <name><![CDATA[Cliff Manspeaker]]></name>
@@ -14,6 +14,111 @@
 
   
   <entry>
+    <title type="html"><![CDATA[301 Redirects with multiple URL segments]]></title>
+    <link href="http://cmanspeaker.github.io/2015/02/09/301-redirects-with-multiple-url-segments/"/>
+    <updated>2015-02-09T20:43:20-05:00</updated>
+    <id>http://cmanspeaker.github.io/2015/02/09/301-redirects-with-multiple-url-segments</id>
+    <content type="html"><![CDATA[<p>I ran into an problem recently for a website redesign that had an entirely different URL structure compared to its previous version. As we wanted to help retain its current search engine rankings and not throw off any bookmarks from previous users, etc., we updated the site&rsquo;s <a href="http://httpd.apache.org/docs/current/howto/htaccess.html">htaccess</a> file to handle these new URLs.</p>
+
+<!--more-->
+
+
+<h3>Sample of the .htaccess file</h3>
+
+<figure class='code'><figcaption><span>.htaccess</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='apache'><span class='line'><span class="c"># URLs to redirect</span>
+</span><span class='line'><span class="nb">Redirect</span> <span class="m">301</span> <span class="sx">/folder</span>    http://newsite.com/new-folder
+</span><span class='line'><span class="nb">Redirect</span> <span class="m">301</span> <span class="sx">/folder/folder2</span>    http://newsite.com/new-folder2
+</span><span class='line'><span class="nb">Redirect</span> <span class="m">301</span> <span class="sx">/folder/page</span>    http://newsite.com/new-folder1
+</span><span class='line'>
+</span><span class='line'><span class="nb">Redirect</span> <span class="m">301</span> <span class="sx">/folder2</span>    http://newsite.com/new-folder2
+</span><span class='line'><span class="nb">Redirect</span> <span class="m">301</span> <span class="sx">/folder2/page</span>    http://newsite.com/new-folder
+</span><span class='line'><span class="nb">Redirect</span> <span class="m">301</span> <span class="sx">/folder2/page3</span>    http://newsite.com/new-folder1
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>The Problem</h3>
+
+<p>The issue that came up was due to once it hit the first entry, it was already firing off the redirect before it could apply the others. So in the above example, it would do the redirect for the first entry:</p>
+
+<hr />
+
+<p><strong>oldsite.com/<em>folder</em></strong><br/>
+<strong>newsite.com/<em><i style="color:green;">new-folder</i></em></strong></p>
+
+<hr />
+
+<p>That is great and what we want.</p>
+
+<p>The main problem that arrives after that is the other entries would not redirect correctly based off of the first redirect. It would redirect the other two entries like so:</p>
+
+<hr />
+
+<p><strong>oldsite.com/<em>folder/folder2</em></strong><br/>
+<strong>newsite.com/<em><i style="color:green;">new-folder</i>/<i style="color:red;">folder2</i></em></strong></p>
+
+<p><strong>oldsite.com/<em>folder/page</em></strong><br/>
+<strong>newsite.com/<em><i style="color:green;">new-folder</i>/<i style="color:red;">page</i></em></strong></p>
+
+<p>Instead of:</p>
+
+<p><strong>oldsite.com/<em>folder/folder2</em></strong><br/>
+<strong>newsite.com/<em><i style="color:green;">new-folder/new-folder2</i></em></strong></p>
+
+<p><strong>oldsite.com/<em>folder/page</em></strong><br/>
+<strong>newsite.com/<em><i style="color:green;">new-folder/new-folder1</i></em></strong></p>
+
+<hr />
+
+<p>So it was redirecting to the first folder correctly based on the new rule but all bets were off as it changed the path for the remaining.</p>
+
+<h3>The Solution</h3>
+
+<p>After much head scratching, google searching and experimenting, I finally found the answer in how the redirects were ordered to solve the problem.</p>
+
+<p>For all of your redirects involving multiple segments in the URL, place the single folder names at the bottom as they&rsquo;ll be run last. In this instance, all of the more specific redirects with more than one folder/pathname will run first and not affect your other redirects. The final redirects will contain your single folder names that can run without any issues as you&rsquo;ve already handled your more specific entries.</p>
+
+<h3>Revised Sample of the .htaccess file</h3>
+
+<figure class='code'><figcaption><span>.htaccess</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='apache'><span class='line'><span class="c"># URLs to redirect</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">Redirect</span> <span class="m">301</span> <span class="sx">/folder/folder2</span>    http://newsite.com/new-folder2
+</span><span class='line'><span class="nb">Redirect</span> <span class="m">301</span> <span class="sx">/folder/page</span>    http://newsite.com/new-folder1
+</span><span class='line'>
+</span><span class='line'><span class="nb">Redirect</span> <span class="m">301</span> <span class="sx">/folder2/page</span>    http://newsite.com/new-folder
+</span><span class='line'><span class="nb">Redirect</span> <span class="m">301</span> <span class="sx">/folder2/page3</span>    http://newsite.com/new-folder1
+</span><span class='line'>
+</span><span class='line'><span class="c"># Single folders last</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">Redirect</span> <span class="m">301</span> <span class="sx">/folder</span>    http://newsite.com/new-folder
+</span><span class='line'><span class="nb">Redirect</span> <span class="m">301</span> <span class="sx">/folder2</span>    http://newsite.com/new-folder2
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Acknowledgement]]></title>
     <link href="http://cmanspeaker.github.io/2014/10/26/acknowledgement/"/>
     <updated>2014-10-26T20:38:59-04:00</updated>
@@ -21,6 +126,9 @@
     <content type="html"><![CDATA[<p>I&rsquo;ve found over the years a typical behaviour that has recently been weighing me down when meeting and estimating out projects for potential new clients.</p>
 
 <p>A company representative reaches out to me to introduce a project and discuss their needs either over the phone or set up a meeting to go over it in person. I spend the time reviewing the project outline, technical specifications, etc. to generate an estimate of what I believe is involved with the information given. I&rsquo;ll review when they can expect to receive the proposal of work and send it via email for their review.</p>
+
+<!--more-->
+
 
 <p>That is when it goes south. There are times when I literally hear nothing back. I never expect an immediate response but after a week of nothing, I&rsquo;ll send a follow up email or place a call to get an idea of where they are with their decision. There have been occasions where that still leads to no response which then gets my mind running on where I fell short.</p>
 
