@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Code | Manspeaker - online home of Cliff Manspeaker]]></title>
   <link href="http://cmanspeaker.github.io/categories/code/atom.xml" rel="self"/>
   <link href="http://cmanspeaker.github.io/"/>
-  <updated>2015-02-10T07:26:33-05:00</updated>
+  <updated>2015-02-10T07:27:54-05:00</updated>
   <id>http://cmanspeaker.github.io/</id>
   <author>
     <name><![CDATA[Cliff Manspeaker]]></name>
@@ -78,7 +78,7 @@ Redirect 301 /folder2/page3    <a href="http://newsite.com/new-folder1">http://n
 
 <p>After much head scratching, google searching and experimenting, I finally found the answer in how the redirects were ordered to solve the problem.</p>
 
-<p>For all of your redirects involving multiple segments in the URL, place the single folder names at the bottom as they&rsquo;ll be run last. In this instance, all of the more specific redirects with more than one folder/pathname will run first and not affect your other redirects. The final redirects will contain your single folder names that can run without any issues as you&rsquo;ve already handled your more specific entries.</p>
+<p>For all of your redirects involving multiple segments in the URL, place the single folder names at the bottom as they&rsquo;ll be run last. In this instance, all of the more specific redirects with more than one folder/pathname will run first and not affect your other redirects. The final grouping will contain your single folder names that can run without any issues as you&rsquo;ve already handled your more specific entries.</p>
 
 <h3>Revised Sample of the .htaccess file</h3>
 
